@@ -540,6 +540,7 @@ class DephyActuator(Device, ActuatorBase):  # type: ignore[no-any-unimported]
             k=0,
             b=0,
             ff=int(ff),
+            be_persistent = False,
         )
 
     def set_current_gains(

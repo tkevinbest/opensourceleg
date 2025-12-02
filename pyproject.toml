@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dephy = ["flexsea"]
+dephy = ["flexsea @ git+https://github.com/tkevinbest/Actuator-Package.git@6847bcf"]
 bno055 = [
     "board~=1.0",
     "adafruit-circuitpython-bno055>=5.4.13,<6 ; sys_platform == 'linux' and platform_machine == 'aarch64'",
@@ -52,7 +52,7 @@ docs = [
     "mkdocs-autorefs>=1.4.0",
 ]
 all = [
-    "flexsea",
+    "flexsea @ git+https://github.com/tkevinbest/Actuator-Package.git@6847bcf",
     "board~=1.0",
     "adafruit-circuitpython-bno055>=5.4.13,<6 ; sys_platform == 'linux' and platform_machine == 'aarch64'",
     "adafruit-circuitpython-lis3dh>=5.2.2,<6 ; sys_platform == 'linux' and platform_machine == 'aarch64'",
@@ -71,6 +71,9 @@ default-groups = [
     "docs",
     "all",
 ]
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.hatch.build.targets.sdist]
 include = ["opensourceleg"]
