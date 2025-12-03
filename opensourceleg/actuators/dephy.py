@@ -540,7 +540,7 @@ class DephyActuator(Device, ActuatorBase):  # type: ignore[no-any-unimported]
             k=0,
             b=0,
             ff=int(ff),
-            be_persistent = False,
+            be_persistent=False,
         )
 
     def set_current_gains(
@@ -574,7 +574,7 @@ class DephyActuator(Device, ActuatorBase):  # type: ignore[no-any-unimported]
             k=0,
             b=0,
             ff=int(ff),
-            be_persistent = False,
+            be_persistent=False,
         )
 
     def set_output_impedance(
@@ -664,7 +664,7 @@ class DephyActuator(Device, ActuatorBase):  # type: ignore[no-any-unimported]
             k=int(k),
             b=int(b),
             ff=int(gains.ff),
-            be_persistent = False,
+            be_persistent=False,
         )
 
     def set_motor_impedance(
