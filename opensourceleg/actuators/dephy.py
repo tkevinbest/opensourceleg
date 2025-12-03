@@ -240,6 +240,8 @@ class DephyActuator(Device, ActuatorBase):  # type: ignore[no-any-unimported]
             >>> actuator.stop()
         """
         self.stop_motor()
+        time.sleep(0.05)
+        self.stop_motor()
         self.set_control_mode(mode=CONTROL_MODES.IDLE)
         self._is_streaming = False
         self._is_open = False
